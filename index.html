@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Pablo Valverde Barreiro | Desarrollador Full Stack</title>
+    <meta
+      name="description"
+      content="Estudiante de Ingeniería de Sistemas. Desarrollo aplicaciones full stack con Java, Spring Boot y React. Busco mi primera oportunidad en un equipo de desarrollo."
+    />
+    <meta name="theme-color" content="#020617" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Juan Pablo Valverde Barreiro | Desarrollador Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Estudiante de Ingeniería de Sistemas con tres proyectos desplegados en Java, Spring Boot y React."
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23020617'/><text x='50' y='68' font-size='56' font-weight='900' text-anchor='middle' fill='%2334d399' font-family='sans-serif'>JP</text></svg>"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/app.js" defer></script>
+
+    <style type="text/tailwindcss">
+      .eyebrow {
+        @apply font-bold uppercase tracking-[0.2em] text-sm;
+      }
+      .nav-link {
+        @apply text-slate-300 font-medium hover:text-emerald-400 transition-colors;
+      }
+      .filter-btn {
+        @apply px-5 py-2.5 rounded-full border border-slate-300 bg-white font-semibold text-slate-700 hover:bg-slate-950 hover:text-white hover:border-slate-950 transition;
+      }
+      .filter-btn.activo {
+        @apply bg-slate-950 text-white border-slate-950;
+      }
+      .proyecto-card {
+        @apply bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:-translate-y-2 hover:shadow-xl transition duration-300 flex flex-col;
+      }
+      .tag {
+        @apply text-xs font-semibold bg-slate-100 text-slate-600 rounded-full px-3 py-1;
+      }
+      .aporte {
+        @apply bg-white rounded-3xl p-7 border border-slate-200;
+      }
+      .stack-card {
+        @apply relative overflow-hidden rounded-3xl border p-7;
+      }
+      .stack-icon {
+        @apply grid size-12 place-items-center rounded-2xl font-mono text-sm font-black text-white shadow-lg;
+      }
+      .chip {
+        @apply flex items-center gap-2.5 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-900/5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md;
+      }
+      .chip img,
+      .chip svg {
+        @apply size-5;
+      }
+      .links {
+        @apply mt-auto pt-5 flex gap-5 font-bold text-slate-950;
+      }
+      .links a {
+        @apply hover:text-emerald-600;
+      }
+      .nota {
+        @apply mt-3 text-xs text-slate-500;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        @apply outline-2 outline-offset-2 outline-emerald-400;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-50 text-slate-800">
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-slate-950/95 backdrop-blur border-b border-white/10"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+        aria-label="Navegación principal"
+      >
+        <a href="#inicio" class="text-xl font-black text-white tracking-tight">
+          Pablo<span class="text-emerald-400">.dev</span>
+        </a>
+
+        <button
+          id="btn-menu"
+          class="md:hidden text-white text-2xl"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <ul
+          id="menu"
+          class="hidden absolute top-full left-0 w-full bg-slate-950 px-6 py-5 space-y-4 md:space-y-0 md:static md:w-auto md:p-0 md:bg-transparent md:flex md:items-center md:gap-7"
+        >
+          <li><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav-link" href="#aporte">Qué aporto</a></li>
+          <li><a class="nav-link" href="#habilidades">Stack</a></li>
+          <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li><a class="nav-link" href="#experiencia">Trayectoria</a></li>
+          <li>
+            <a
+              class="inline-block bg-emerald-500 text-slate-950 px-4 py-2 rounded-lg font-bold hover:bg-emerald-400 transition"
+              href="#contacto"
+              >Contacto</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- INICIO -->
+      <section
+        id="inicio"
+        class="min-h-screen pt-28 pb-16 px-6 bg-slate-950 text-white flex items-center"
+      >
+        <div
+          class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <p class="eyebrow text-emerald-400">
+              Juan Pablo Valverde Barreiro | Ingeniero de Sistemas
+            </p>
+            <h1 class="mt-4 text-4xl md:text-6xl font-black leading-tight">
+              Desarrollo sistemas completos, del modelo de datos a producción.
+            </h1>
+            <p class="mt-6 text-lg text-slate-400 max-w-xl leading-relaxed">
+              Estudiante de Ingeniería de Sistemas con tres proyectos
+              desplegados en Java, Spring Boot y React. Busco mi primera
+              oportunidad en un equipo donde pueda aportar y seguir creciendo.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#proyectos"
+                class="bg-emerald-500 text-slate-950 px-6 py-3 rounded-xl font-bold hover:bg-emerald-400 transition"
+                >Ver mis proyectos</a
+              >
+              <a
+                href="assets/CV-JUAN-PABLO-VALVERDE-BARREIRO.pdf"
+                download
+                class="border border-slate-600 px-6 py-3 rounded-xl font-bold hover:border-emerald-400 hover:text-emerald-400 transition"
+                >Descargar CV</a
+              >
+              <a
+                href="https://github.com/Pablo2467"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-2 py-3 font-bold text-slate-300 hover:text-emerald-400 transition"
+                >GitHub ↗</a
+              >
+            </div>
+            <p class="mt-6 text-sm text-slate-400">
+              <span
+                class="inline-block w-2 h-2 rounded-full bg-emerald-400 mr-2"
+              ></span>
+              Tu próximo junior ya desplegó 3 sistemas completos y quiere
+              aprender más rápido.
+            </p>
+          </div>
+          <div class="flex justify-center md:justify-end">
+            <img
+              src="assets/foto.jpeg"
+              alt="Retrato de Juan Pablo Valverde Barreiro"
+              width="448"
+              height="448"
+              class="w-full max-w-md aspect-square object-cover object-[50%_85%] rounded-3xl border border-white/10 shadow-2xl bg-slate-900"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+          <p class="eyebrow text-emerald-600">Sobre mí</p>
+          <h2 class="mt-3 text-4xl md:text-5xl font-black text-slate-950">
+            Ingeniería con criterio, no solo código
+          </h2>
+          <p class="mt-8 text-lg text-slate-600 leading-8">
+            Estudio Ingeniería de Sistemas desde 2024 y me enfoco en el
+            desarrollo full stack. He construido sistemas de gestión con roles,
+            inventario, pagos y auditoría, y los he llevado hasta un despliegue
+            funcional.
+          </p>
+          <p class="mt-4 text-lg text-slate-600 leading-8">
+            Me importa que el código sea claro, que las reglas de negocio estén
+            bien resueltas y que el proyecto quede documentado para que otra
+            persona pueda continuarlo. Busco un equipo donde aprender de gente
+            con más experiencia y aportar desde el primer día.
+          </p>
+
+          <h3 class="mt-12 text-xl font-black text-slate-950">Cómo trabajo</h3>
+          <ol class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <li class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <strong class="block text-emerald-600">1. Entender</strong>
+              <span class="text-slate-600 text-sm"
+                >Levanto requisitos y defino el problema real antes de escribir
+                código.</span
+              >
+            </li>
+            <li class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <strong class="block text-emerald-600">2. Diseñar</strong>
+              <span class="text-slate-600 text-sm"
+                >Modelo los datos, los flujos y la arquitectura.</span
+              >
+            </li>
+            <li class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <strong class="block text-emerald-600">3. Construir</strong>
+              <span class="text-slate-600 text-sm"
+                >Desarrollo en iteraciones cortas y verificables.</span
+              >
+            </li>
+            <li class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+              <strong class="block text-emerald-600">4. Entregar</strong>
+              <span class="text-slate-600 text-sm"
+                >Despliego y documento para que el proyecto se pueda
+                mantener.</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- QUÉ APORTO -->
+      <section id="aporte" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-6xl mx-auto">
+          <p class="eyebrow text-emerald-600">Qué aporto</p>
+          <h2
+            class="mt-3 text-4xl md:text-5xl font-black text-slate-950 max-w-2xl"
+          >
+            Lo que puedo hacer en tu equipo
+          </h2>
+          <div
+            class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            <article class="aporte">
+              <h3 class="text-xl font-black text-slate-950">
+                Backend con Java y Spring Boot
+              </h3>
+              <p class="mt-3 text-slate-600">
+                APIs REST con autenticación JWT, permisos por rol y lógica de
+                negocio transaccional, organizadas por módulos.
+              </p>
+            </article>
+            <article class="aporte">
+              <h3 class="text-xl font-black text-slate-950">
+                Frontend con React y TypeScript
+              </h3>
+              <p class="mt-3 text-slate-600">
+                Interfaces responsive con formularios validados, manejo de
+                estado del servidor y rutas protegidas por rol.
+              </p>
+            </article>
+            <article class="aporte">
+              <h3 class="text-xl font-black text-slate-950">Bases de datos</h3>
+              <p class="mt-3 text-slate-600">
+                Modelado relacional en PostgreSQL y migraciones versionadas con
+                Flyway, con trazabilidad de cambios y movimientos.
+              </p>
+            </article>
+            <article class="aporte">
+              <h3 class="text-xl font-black text-slate-950">
+                Equipo y documentación
+              </h3>
+              <p class="mt-3 text-slate-600">
+                Trabajo con Git y GitHub, he participado en un hackathon en
+                equipo y documento mis proyectos con README, arquitectura y
+                reglas de negocio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- STACK -->
+      <section id="habilidades" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <p class="eyebrow text-emerald-600">Stack</p>
+          <h2
+            class="mt-3 text-4xl md:text-5xl font-black tracking-tight text-slate-950 max-w-2xl"
+          >
+            Tecnologías que he usado en mis proyectos
+          </h2>
+
+          <div class="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <article class="stack-card border-sky-200 bg-sky-50">
+              <div
+                class="pointer-events-none absolute -right-12 -top-12 size-44 rounded-full bg-sky-200/60 blur-2xl"
+              ></div>
+              <div class="relative flex items-center gap-4">
+                <span class="stack-icon bg-sky-500 shadow-sky-500/30"
+                  >&lt;/&gt;</span
+                >
+                <div>
+                  <h3 class="text-xl font-black text-slate-950">Frontend</h3>
+                  <p class="text-sm text-slate-600">
+                    Interfaces claras y responsive.
+                  </p>
+                </div>
+              </div>
+              <ul class="relative mt-7 flex flex-wrap gap-2.5">
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/react" alt="" />React
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/typescript"
+                    alt=""
+                  />TypeScript
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/javascript"
+                    alt=""
+                  />JavaScript
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/tailwindcss"
+                    alt=""
+                  />Tailwind CSS
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/html5" alt="" />HTML
+                  semántico
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/reactquery"
+                    alt=""
+                  />TanStack Query
+                </li>
+              </ul>
+            </article>
+
+            <article class="stack-card border-emerald-200 bg-emerald-50">
+              <div
+                class="pointer-events-none absolute -right-12 -top-12 size-44 rounded-full bg-emerald-200/60 blur-2xl"
+              ></div>
+              <div class="relative flex items-center gap-4">
+                <span class="stack-icon bg-emerald-500 shadow-emerald-500/30"
+                  >{ }</span
+                >
+                <div>
+                  <h3 class="text-xl font-black text-slate-950">
+                    Backend y datos
+                  </h3>
+                  <p class="text-sm text-slate-600">
+                    Lógica de negocio y persistencia.
+                  </p>
+                </div>
+              </div>
+              <ul class="relative mt-7 flex flex-wrap gap-2.5">
+                <li class="chip">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                    alt=""
+                  />Java 21
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/springboot"
+                    alt=""
+                  />Spring Boot
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/springsecurity"
+                    alt=""
+                  />Spring Security y JWT
+                </li>
+                <li class="chip">
+                  <img
+                    src="https://cdn.simpleicons.org/postgresql"
+                    alt=""
+                  />PostgreSQL
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/python" alt="" />Python
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/flyway" alt="" />Flyway
+                </li>
+                <li class="chip">
+                  <svg
+                    class="text-emerald-600"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 7h12M15 3l4 4-4 4M17 17H5M9 13l-4 4 4 4" /></svg
+                  >APIs REST
+                </li>
+              </ul>
+            </article>
+
+            <article class="stack-card border-violet-200 bg-violet-50">
+              <div
+                class="pointer-events-none absolute -right-12 -top-12 size-44 rounded-full bg-violet-200/60 blur-2xl"
+              ></div>
+              <div class="relative flex items-center gap-4">
+                <span class="stack-icon bg-violet-500 shadow-violet-500/30"
+                  >&gt;_</span
+                >
+                <div>
+                  <h3 class="text-xl font-black text-slate-950">
+                    Herramientas
+                  </h3>
+                  <p class="text-sm text-slate-600">
+                    Versionado, contenedores y despliegue.
+                  </p>
+                </div>
+              </div>
+              <ul class="relative mt-7 flex flex-wrap gap-2.5">
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/git" alt="" />Git
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/github" alt="" />GitHub
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/docker" alt="" />Docker
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/vercel" alt="" />Vercel
+                </li>
+                <li class="chip">
+                  <img src="https://cdn.simpleicons.org/render" alt="" />Render
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-6xl mx-auto">
+          <p class="eyebrow text-emerald-600">Proyectos</p>
+          <h2 class="mt-3 text-4xl md:text-5xl font-black text-slate-950">
+            Lo que he construido
+          </h2>
+          <p class="mt-4 text-slate-600 max-w-2xl">
+            Las demos usan servidores gratuitos: la primera carga puede tardar
+            hasta un minuto en despertar.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3" id="filtros">
+            <button class="filter-btn activo" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="fullstack">
+              Full stack
+            </button>
+            <button class="filter-btn" data-filter="hackathon">
+              Hackathon
+            </button>
+          </div>
+
+          <div
+            id="grid-proyectos"
+            class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7"
+          >
+            <!-- GymFlow -->
+            <article class="proyecto-card" data-category="fullstack">
+              <div
+                class="h-40 bg-gradient-to-br from-emerald-500 to-slate-950 flex items-end p-5"
+              >
+                <span class="text-white/90 font-black text-2xl">GymFlow</span>
+              </div>
+              <div class="p-6 flex flex-col grow">
+                <span class="text-sm font-bold text-emerald-700"
+                  >Full stack</span
+                >
+                <h3 class="mt-2 text-xl font-black text-slate-950">
+                  Sistema de gestión para gimnasio comercial
+                </h3>
+                <p class="mt-3 text-slate-600">
+                  Clientes, membresías, pagos, inventario y ventas. Una
+                  membresía solo se activa con un pago confirmado, las ventas
+                  descuentan stock de forma transaccional y cada acción sensible
+                  queda en un log de auditoría.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="tag">Java 21</span
+                  ><span class="tag">Spring Boot</span
+                  ><span class="tag">PostgreSQL</span
+                  ><span class="tag">React</span
+                  ><span class="tag">TypeScript</span
+                  ><span class="tag">JWT</span>
+                </div>
+                <p class="nota">
+                  Acceso demo: <code>admin@gymflow.com</code> /
+                  <code>admin123</code>
+                </p>
+                <div class="links">
+                  <a
+                    href="https://gimnasio-completo.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demo →</a
+                  >
+                  <a
+                    href="https://github.com/Pablo2467/Gimnasio-completo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Código →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- SaaS Granizado -->
+            <article class="proyecto-card" data-category="fullstack">
+              <div
+                class="h-40 bg-gradient-to-br from-sky-500 to-slate-950 flex items-end p-5"
+              >
+                <span class="text-white/90 font-black text-2xl"
+                  >SaaS Granizado</span
+                >
+              </div>
+              <div class="p-6 flex flex-col grow">
+                <span class="text-sm font-bold text-emerald-700"
+                  >Full stack · SaaS</span
+                >
+                <h3 class="mt-2 text-xl font-black text-slate-950">
+                  Gestión multiempresa para negocios de granizados
+                </h3>
+                <p class="mt-3 text-slate-600">
+                  Productos, inventario, pedidos, empleados y reportes de
+                  ganancias. Cada empresa ve solo sus datos, con cuatro roles y
+                  descuento automático de insumos según la receta de cada
+                  producto.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="tag">Java 21</span
+                  ><span class="tag">Spring Boot</span
+                  ><span class="tag">PostgreSQL</span
+                  ><span class="tag">Flyway</span><span class="tag">React</span
+                  ><span class="tag">Tailwind</span>
+                </div>
+                <p class="nota">
+                  Acceso demo: <code>pablo2@test.com</code> /
+                  <code>Pablo12345</code>
+                </p>
+                <div class="links">
+                  <a
+                    href="https://saa-s-granizado.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demo →</a
+                  >
+                  <a
+                    href="https://github.com/Pablo2467/SaaSGranizado"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Código →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- AyudaYA -->
+            <article class="proyecto-card" data-category="hackathon">
+              <div
+                class="h-40 bg-gradient-to-br from-amber-400 to-slate-950 flex items-end p-5"
+              >
+                <span class="text-white/90 font-black text-2xl">AyudaYA</span>
+              </div>
+              <div class="p-6 flex flex-col grow">
+                <span class="text-sm font-bold text-emerald-700"
+                  >Hackathon · USCO 2025</span
+                >
+                <h3 class="mt-2 text-xl font-black text-slate-950">
+                  Red solidaria contra el hambre en zonas urbanas
+                </h3>
+                <p class="mt-3 text-slate-600">
+                  Conecta a personas que necesitan ayuda con voluntarios y
+                  donantes cercanos. Proyecto en equipo de 4 para la II
+                  Hackathon DEVURITY. <strong>Mi aporte:</strong> la
+                  autorización de certificados y el diseño del aplicativo. La
+                  API es simulada con json-server.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="tag">React</span
+                  ><span class="tag">TypeScript</span
+                  ><span class="tag">Tailwind</span
+                  ><span class="tag">Recharts</span
+                  ><span class="tag">Framer Motion</span>
+                </div>
+                <div class="links">
+                  <a
+                    href="https://hackathon-usco-devurity.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Demo →</a
+                  >
+                  <a
+                    href="https://github.com/Pablo2467/hackathon-usco-DEVURITY"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Código →</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAYECTORIA -->
+      <section id="experiencia" class="py-24 px-6 bg-slate-950 text-white">
+        <div class="max-w-4xl mx-auto">
+          <p class="eyebrow text-emerald-400">Trayectoria</p>
+          <h2 class="mt-3 text-4xl md:text-5xl font-black">
+            Formación y experiencia
+          </h2>
+          <div class="mt-12 space-y-6">
+            <article class="border-l-2 border-emerald-400 pl-6 py-2">
+              <span class="text-emerald-400 font-bold">2024 — Actualidad</span>
+              <h3 class="mt-2 text-xl font-bold">
+                Ingeniería de Sistemas · Universidad CORHUILA
+              </h3>
+              <p class="mt-2 text-slate-300">
+                Formación en desarrollo de software, bases de datos y
+                arquitectura. Actualmente en curso.
+              </p>
+            </article>
+            <article class="border-l-2 border-slate-600 pl-6 py-2">
+              <span class="text-slate-300 font-bold">Abril 2025</span>
+              <h3 class="mt-2 text-xl font-bold">
+                II Hackathon de Programación DEVURITY · USCO
+              </h3>
+              <p class="mt-2 text-slate-300">
+                Desarrollo en equipo de AyudaYA. Me encargué de la autorización
+                de certificados y del diseño del aplicativo.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="py-24 px-6 bg-emerald-500">
+        <div
+          class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <p class="eyebrow text-slate-950/70">Contacto</p>
+            <h2 class="mt-3 text-4xl md:text-5xl font-black text-slate-950">
+              Listo para aportar a tu equipo desde el primer día
+            </h2>
+            <p class="mt-5 text-lg text-slate-900/80">
+              Busco una experiencia laboral donde pueda construir producto real
+              y aprender de gente con más experiencia.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 shadow-xl">
+            <h3 class="text-2xl font-black text-slate-950">Hablemos</h3>
+            <p class="mt-2 text-slate-600">
+              Escríbeme y te cuento cómo construí cada proyecto.
+            </p>
+
+            <a
+              href="mailto:juanpablobarreiro8@gmail.com?subject=Oportunidad%20para%20desarrollador%20junior"
+              class="mt-6 flex items-center justify-center gap-2 bg-slate-950 text-white rounded-xl px-6 py-4 font-bold hover:bg-slate-800 transition"
+            >
+              Escríbeme un correo
+            </a>
+            <p class="mt-3 text-center text-sm text-slate-500">
+              juanpablobarreiro8@gmail.com
+            </p>
+
+            <div class="mt-6 grid grid-cols-3 gap-3 text-center font-semibold">
+              <a
+                href="https://www.linkedin.com/in/pablo-valverde-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-slate-200 rounded-xl px-3 py-2.5 hover:border-emerald-500 hover:text-emerald-600 transition"
+                >LinkedIn</a
+              >
+              <a
+                href="https://github.com/Pablo2467"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border border-slate-200 rounded-xl px-3 py-2.5 hover:border-emerald-500 hover:text-emerald-600 transition"
+                >GitHub</a
+              >
+              <a
+                href="assets/CV-JUAN-PABLO-VALVERDE-BARREIRO.pdf"
+                download
+                class="border border-slate-200 rounded-xl px-3 py-2.5 hover:border-emerald-500 hover:text-emerald-600 transition"
+                >CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-slate-950 border-t border-white/10 px-6 py-8 text-center text-slate-400"
+    >
+      <p>
+        © <span id="anio"></span> Juan Pablo Valverde Barreiro. Construido con
+        HTML, Tailwind CSS y JavaScript.
+      </p>
+    </footer>
+  </body>
+</html>
